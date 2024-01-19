@@ -1,0 +1,14 @@
+<c-sidebar *ngIf="showNavBar"  visible class="sidebar-nav d-print-none sidebar page-padding sidebar-fixed" ng-reflect-id="sidebar" ng-reflect-visible>
+  <!-- Main navigation links -->
+  <c-sidebar-nav  role="nav">
+    <ng-container *ngFor="let module of modules; let last = last">
+      <c-sidebar-nav-link class="nav-item ng-star-inserted" (click)="hideNavBar()" [routerLink]="module.routerLink">
+        {{ module.label }}
+      </c-sidebar-nav-link>
+      <!-- Add a horizontal line if it's not the last module -->
+      <hr *ngIf="!last" class="sidebar-divider">
+    </ng-container>
+  </c-sidebar-nav>
+</c-sidebar>
+  <router-outlet></router-outlet>
+

@@ -1,0 +1,123 @@
+<div class=" ">
+<c-sidebar   visible class="page-padding d-print-none page-padding sidebar-nav sidebar sidebar-fixed" ng-reflect-id="sidebar" ng-reflect-visible>
+    <!-- Main navigation links -->
+    <c-sidebar-nav class="sidebar-nav" role="nav">
+      <ng-container *ngFor="let module of modules; let last = last">
+        <c-sidebar-nav-link class="nav-item ng-star-inserted"  [routerLink]="module.routerLink">
+          {{ module.label }}
+        </c-sidebar-nav-link>
+        <!-- Add a horizontal line if it's not the last module -->
+        <hr *ngIf="!last" class="sidebar-divider">
+      </ng-container>
+    </c-sidebar-nav>
+  </c-sidebar>
+    
+  <c-row _ngcontent-ng-c4138724824="" class="margin-dashboard row"><c-col _ngcontent-ng-c4138724824="" sm="6" xl="3" _nghost-ng-c1814645994="" ng-reflect-sm="6" ng-reflect-xl="3" class="col-sm-6 col-xl-3"><c-widget-stat-a _ngcontent-ng-c4138724824="" color="primary" title="Users" class="mb-4 bg-primary card text-high-emphasis-inverse" ng-reflect-color="primary" ng-reflect-title="Users"><c-card-body ng-reflect-ng-class="[object Object]" class="pb-0 d-flex justify-content-between align-items-start card-body"><div><div class="fs-4 fw-semibold ng-star-inserted">
+    26K
+    <span _ngcontent-ng-c4138724824="" class="fs-6 fw-normal ng-star-inserted">
+      (-12.4% <svg _ngcontent-ng-c4138724824="" cIcon="" name="cilArrowBottom" ng-reflect-content="" ng-reflect-name="cilArrowBottom" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img" class="icon"><polygon fill="var(--ci-primary-color, currentColor)" points="367.997 338.75 271.999 434.747 271.999 17.503 239.999 17.503 239.999 434.745 144.003 338.75 121.376 361.377 256 496 390.624 361.377 367.997 338.75" class="ci-primary"></polygon></svg>)
+    </span>
+  <!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "[object Object]"
+}--><div class="ng-star-inserted"> Users
+<!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "true"
+}--></div><c-dropdown _ngcontent-ng-c4138724824="" alignment="end" variant="btn-group" _nghost-ng-c63015617="" ng-reflect-alignment="end" ng-reflect-variant="btn-group" class="btn-group ng-star-inserted"><button _ngcontent-ng-c4138724824="" cbutton="" cdropdowntoggle="" color="transparent" class="p-0 btn btn-transparent" ng-reflect-color="transparent" ng-reflect-caret="false" type="button" fdprocessedid="1948i9k"><svg _ngcontent-ng-c4138724824="" cIcon="" name="cilOptions" class="text-high-emphasis-inverse icon" ng-reflect-content="" ng-reflect-name="cilOptions" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img"><path fill="var(--ci-primary-color, currentColor)" d="M256,144a64,64,0,1,0-64-64A64.072,64.072,0,0,0,256,144Zm0-96a32,32,0,1,1-32,32A32.036,32.036,0,0,1,256,48Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,368a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,368Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,464Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,288Z" class="ci-primary"></path></svg></button><ul _ngcontent-ng-c4138724824="" cdropdownmenu="" class="dropdown-menu"><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Another action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Something else here</a></li><li _ngcontent-ng-c4138724824=""><hr _ngcontent-ng-c4138724824="" cdropdowndivider="" class="dropdown-divider"></li><li _ngcontent-ng-c4138724824=""><button _ngcontent-ng-c4138724824="" cdropdownitem="" class="dropdown-item">Separated link</button></li></ul></c-dropdown><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></c-card-body><c-chart _ngcontent-ng-c4138724824="" height="70" class="mt-3 mx-3 chart-wrapper ng-star-inserted" _nghost-ng-c1191810201="" ng-reflect-height="70" ng-reflect-data="[object Object]" ng-reflect-options="[object Object]" ng-reflect-type="line" style="height: 70px;"><canvas _ngcontent-ng-c1191810201="" role="img" style="display: block; box-sizing: border-box; height: 70px; width: 308px;" height="105" id="c-chartjs-1" width="462"></canvas></c-chart><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--><!--ng-container--><!--container--><!--container--><!--container--><!--container--></c-widget-stat-a></c-col><c-col _ngcontent-ng-c4138724824="" sm="6" xl="3" _nghost-ng-c1814645994="" ng-reflect-sm="6" ng-reflect-xl="3" class="col-sm-6 col-xl-3"><c-widget-stat-a _ngcontent-ng-c4138724824="" color="info" class="mb-4 bg-info card text-high-emphasis-inverse" ng-reflect-color="info" ng-reflect-title="Income"><c-card-body ng-reflect-ng-class="[object Object]" class="pb-0 d-flex justify-content-between align-items-start card-body"><div><div class="fs-4 fw-semibold ng-star-inserted">
+    <span _ngcontent-ng-c4138724824="" class="ng-star-inserted">$6.200</span>
+    <span _ngcontent-ng-c4138724824="" class="fs-6 fw-normal ng-star-inserted">
+      (40.9%<svg _ngcontent-ng-c4138724824="" cIcon="" name="cilArrowTop" ng-reflect-content="" ng-reflect-name="cilArrowTop" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img" class="icon"><polygon fill="var(--ci-primary-color, currentColor)" points="390.624 150.625 256 16 121.376 150.625 144.004 173.252 240.001 77.254 240.001 495.236 272.001 495.236 272.001 77.257 367.996 173.252 390.624 150.625" class="ci-primary"></polygon></svg>)
+    </span>
+  <!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "[object Object]"
+}--><div class="ng-star-inserted"> Income
+<!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "true"
+}--></div><c-dropdown _ngcontent-ng-c4138724824="" alignment="end" variant="btn-group" _nghost-ng-c63015617="" ng-reflect-alignment="end" ng-reflect-variant="btn-group" class="btn-group ng-star-inserted"><button _ngcontent-ng-c4138724824="" cbutton="" cdropdowntoggle="" color="transparent" class="p-0 btn btn-transparent" ng-reflect-color="transparent" ng-reflect-caret="false" type="button" fdprocessedid="v2rtv8"><svg _ngcontent-ng-c4138724824="" cIcon="" name="cilOptions" class="text-high-emphasis-inverse icon" ng-reflect-content="" ng-reflect-name="cilOptions" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img"><path fill="var(--ci-primary-color, currentColor)" d="M256,144a64,64,0,1,0-64-64A64.072,64.072,0,0,0,256,144Zm0-96a32,32,0,1,1-32,32A32.036,32.036,0,0,1,256,48Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,368a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,368Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,464Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,288Z" class="ci-primary"></path></svg></button><ul _ngcontent-ng-c4138724824="" cdropdownmenu="" class="dropdown-menu"><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Another action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Something else here</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" ng-reflect-disabled="true" href="#/dashboard" tabindex="-1" aria-disabled="true" class="disabled dropdown-item">Disabled</a></li></ul></c-dropdown><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></c-card-body><c-chart _ngcontent-ng-c4138724824="" height="70" type="line" class="mt-3 mx-3 chart-wrapper ng-star-inserted" _nghost-ng-c1191810201="" ng-reflect-height="70" ng-reflect-type="line" ng-reflect-data="[object Object]" ng-reflect-options="[object Object]" style="height: 70px;"><canvas _ngcontent-ng-c1191810201="" role="img" style="display: block; box-sizing: border-box; height: 70px; width: 308px;" height="105" id="c-chartjs-2" width="462"></canvas><div class="chartjs-tooltip" style="opacity: 0; left: 269.333px; top: 116.188px;"><table style="margin: 0px;"><thead class="chartjs-tooltip-header"><tr class="chartjs-tooltip-header-item" style="border-width: 0px;"><th style="border-width: 0px;">June</th></tr></thead><tbody class="chartjs-tooltip-body"><tr class="chartjs-tooltip-body-item"><td style="border-width: 0px;"><span style="background: rgb(51, 153, 255); border-color: rgba(255, 255, 255, 0.55); border-width: 2px; margin-right: 10px; height: 10px; width: 10px; display: inline-block;"></span>My Second dataset: 22</td></tr></tbody></table></div></c-chart><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--><!--ng-container--><!--container--><!--container--><!--container--><!--container--></c-widget-stat-a></c-col><c-col _ngcontent-ng-c4138724824="" sm="6" xl="3" _nghost-ng-c1814645994="" ng-reflect-sm="6" ng-reflect-xl="3" class="col-sm-6 col-xl-3"><c-widget-stat-a _ngcontent-ng-c4138724824="" color="warning" class="mb-4 bg-warning card text-high-emphasis-inverse" ng-reflect-color="warning" ng-reflect-title="Conversion Rate"><c-card-body ng-reflect-ng-class="[object Object]" class="pb-0 d-flex justify-content-between align-items-start card-body"><div><div class="fs-4 fw-semibold ng-star-inserted">
+    <span _ngcontent-ng-c4138724824="" class="ng-star-inserted">2.49</span>
+    <span _ngcontent-ng-c4138724824="" class="fs-6 fw-normal ng-star-inserted">
+      (84.7% <svg _ngcontent-ng-c4138724824="" cIcon="" name="cilArrowTop" ng-reflect-content="" ng-reflect-name="cilArrowTop" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img" class="icon"><polygon fill="var(--ci-primary-color, currentColor)" points="390.624 150.625 256 16 121.376 150.625 144.004 173.252 240.001 77.254 240.001 495.236 272.001 495.236 272.001 77.257 367.996 173.252 390.624 150.625" class="ci-primary"></polygon></svg>)
+    </span>
+  <!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "[object Object]"
+}--><div class="ng-star-inserted"> Conversion Rate
+<!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "true"
+}--></div><c-dropdown _ngcontent-ng-c4138724824="" alignment="end" variant="btn-group" _nghost-ng-c63015617="" ng-reflect-alignment="end" ng-reflect-variant="btn-group" class="btn-group ng-star-inserted"><button _ngcontent-ng-c4138724824="" cbutton="" cdropdowntoggle="" color="transparent" class="p-0 btn btn-transparent" ng-reflect-color="transparent" ng-reflect-caret="false" type="button" fdprocessedid="c2yg0n"><svg _ngcontent-ng-c4138724824="" cIcon="" name="cilOptions" class="text-high-emphasis-inverse icon" ng-reflect-content="" ng-reflect-name="cilOptions" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img"><path fill="var(--ci-primary-color, currentColor)" d="M256,144a64,64,0,1,0-64-64A64.072,64.072,0,0,0,256,144Zm0-96a32,32,0,1,1-32,32A32.036,32.036,0,0,1,256,48Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,368a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,368Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,464Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,288Z" class="ci-primary"></path></svg></button><ul _ngcontent-ng-c4138724824="" cdropdownmenu="" class="dropdown-menu"><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Another action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Something else here</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" ng-reflect-disabled="true" href="#/dashboard" tabindex="-1" aria-disabled="true" class="disabled dropdown-item">Disabled</a></li></ul></c-dropdown><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></c-card-body><c-chart _ngcontent-ng-c4138724824="" height="70" type="line" class="mt-3 chart-wrapper ng-star-inserted" _nghost-ng-c1191810201="" ng-reflect-height="70" ng-reflect-type="line" ng-reflect-data="[object Object]" ng-reflect-options="[object Object]" style="height: 70px;"><canvas _ngcontent-ng-c1191810201="" role="img" style="display: block; box-sizing: border-box; height: 70px; width: 340px;" height="105" id="c-chartjs-3" width="510"></canvas></c-chart><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--><!--ng-container--><!--container--><!--container--><!--container--><!--container--></c-widget-stat-a></c-col><c-col _ngcontent-ng-c4138724824="" sm="6" xl="3" _nghost-ng-c1814645994="" ng-reflect-sm="6" ng-reflect-xl="3" class="col-sm-6 col-xl-3"><c-widget-stat-a _ngcontent-ng-c4138724824="" color="danger" class="mb-4 bg-danger card text-high-emphasis-inverse" ng-reflect-color="danger" ng-reflect-title="Sessions"><c-card-body ng-reflect-ng-class="[object Object]" class="pb-0 d-flex justify-content-between align-items-start card-body"><div><div class="fs-4 fw-semibold ng-star-inserted">
+    <span _ngcontent-ng-c4138724824="" class="ng-star-inserted">44K</span>
+    <span _ngcontent-ng-c4138724824="" class="fs-6 fw-normal ng-star-inserted">
+      (-23.6% <svg _ngcontent-ng-c4138724824="" cIcon="" name="cilArrowBottom" ng-reflect-content="" ng-reflect-name="cilArrowBottom" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img" class="icon"><polygon fill="var(--ci-primary-color, currentColor)" points="367.997 338.75 271.999 434.747 271.999 17.503 239.999 17.503 239.999 434.745 144.003 338.75 121.376 361.377 256 496 390.624 361.377 367.997 338.75" class="ci-primary"></polygon></svg>)
+    </span>
+  <!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "[object Object]"
+}--><div class="ng-star-inserted"> Sessions
+<!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></div><!--bindings={
+"ng-reflect-ng-if": "true"
+}--></div><c-dropdown _ngcontent-ng-c4138724824="" alignment="end" variant="btn-group" _nghost-ng-c63015617="" ng-reflect-alignment="end" ng-reflect-variant="btn-group" class="btn-group ng-star-inserted"><button _ngcontent-ng-c4138724824="" cbutton="" cdropdowntoggle="" color="transparent" class="p-0 btn btn-transparent" ng-reflect-color="transparent" ng-reflect-caret="false" type="button" fdprocessedid="x7hdgf"><svg _ngcontent-ng-c4138724824="" cIcon="" name="cilOptions" class="text-high-emphasis-inverse icon" ng-reflect-content="" ng-reflect-name="cilOptions" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" pointer-events="none" role="img"><path fill="var(--ci-primary-color, currentColor)" d="M256,144a64,64,0,1,0-64-64A64.072,64.072,0,0,0,256,144Zm0-96a32,32,0,1,1-32,32A32.036,32.036,0,0,1,256,48Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,368a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,368Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,464Z" class="ci-primary"></path><path fill="var(--ci-primary-color, currentColor)" d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,288Z" class="ci-primary"></path></svg></button><ul _ngcontent-ng-c4138724824="" cdropdownmenu="" class="dropdown-menu"><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Another action</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" href="#/dashboard" class="dropdown-item">Something else here</a></li><li _ngcontent-ng-c4138724824=""><a _ngcontent-ng-c4138724824="" routerlink="./" cdropdownitem="" ng-reflect-router-link="./" ng-reflect-disabled="true" href="#/dashboard" tabindex="-1" aria-disabled="true" class="disabled dropdown-item">Disabled</a></li></ul></c-dropdown><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--></c-card-body><c-chart _ngcontent-ng-c4138724824="" height="70" type="bar" class="mt-3 mx-3 chart-wrapper ng-star-inserted" _nghost-ng-c1191810201="" ng-reflect-height="70" ng-reflect-type="bar" ng-reflect-data="[object Object]" ng-reflect-options="[object Object]" style="height: 70px;"><canvas _ngcontent-ng-c1191810201="" role="img" style="display: block; box-sizing: border-box; height: 70px; width: 308px;" height="105" id="c-chartjs-4" width="462"></canvas><div class="chartjs-tooltip" style="opacity: 0; left: 314.375px; top: 103.6px;"><table style="margin: 0px;"><thead class="chartjs-tooltip-header"><tr class="chartjs-tooltip-header-item" style="border-width: 0px;"><th style="border-width: 0px;">April</th></tr></thead><tbody class="chartjs-tooltip-body"><tr class="chartjs-tooltip-body-item"><td style="border-width: 0px;"><span style="background: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.55); border-width: 2px; margin-right: 10px; height: 10px; width: 10px; display: inline-block;"></span>My Fourth dataset: 82</td></tr></tbody></table></div></c-chart><!--bindings={
+"ng-reflect-ng-template-outlet": "[object Object]"
+}--><!--ng-container--><!--container--><!--container--><!--container--><!--container--></c-widget-stat-a></c-col></c-row>    
+  <div class="margin-dashboard">
+    <div class="row">
+        <div class="col-md-6">
+  <c-progress class="mb-3 ">
+  <c-progress-bar [value]="0"></c-progress-bar>
+  </c-progress>
+  <c-progress class="mb-3">
+  <c-progress-bar [value]="25"></c-progress-bar>
+  </c-progress>
+  <c-progress class="mb-3">
+  <c-progress-bar [value]="50"></c-progress-bar>
+  </c-progress>
+  <c-progress class="mb-3">
+  <c-progress-bar [value]="75"></c-progress-bar>
+  </c-progress>
+  <c-progress class="mb-3">
+  <c-progress-bar [value]="100"></c-progress-bar>
+  </c-progress> 
+  </div>
+  <div class="col-md-6">
+    <c-chart
+  [data]="data"
+  type="doughnut">
+    </c-chart>
+  </div>
+  </div>
+  </div>
+  <div class="margin-dashboard">
+  <c-chart
+  [data]="data1"
+  type="line"
+  (chartRef)="handleChartRef($event)">
+</c-chart>
+<c-chart [data]="data2" type="bar"></c-chart>
+  </div>
+  </div>
