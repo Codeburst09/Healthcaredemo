@@ -35,7 +35,7 @@ import { MachineAppointmentListComponent } from './appointment/machine-appointme
 import { InvestigationReportComponent } from './appointment/investigation-report/investigation-report.component';
 import { PatientRegistrationComponent } from './appointment/patient-registration/patient-registration.component';
 import { ChartjsComponent } from '@coreui/angular-chartjs';
-
+import { DashbaordService } from './dashbaord.service';
 @NgModule({
     declarations: [AppComponent,PatientRegistrationComponent,InvestigationReportComponent,MachineAppointmentListComponent,MachineAppointmentComponent,HospitalTariffComponent,AppComponent,DoctorAvailabilityComponent,DoctorLeaveComponent, HomepageComponent,NavComponent, AppointmentComponent,DoctorAppointmentListComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],

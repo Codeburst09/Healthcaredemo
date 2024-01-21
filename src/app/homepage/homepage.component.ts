@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import Chart from 'chart.js';
 import { DashboardChartsData, IChartProps } from './homepage.chart';
 //import { DashboardChartsData,  } from './homepage.chart';
+import { DashbaordService } from '../dashbaord.service';
+import {DoughnutChartData} from '../sharedtype.component'
 interface SidebarModule {
   label: string;
   routerLink: string;
@@ -28,8 +30,9 @@ interface ChartData {
   styleUrl: './homepage.component.css'
 })
 
-export class HomepageComponent {
+export class HomepageComponent  {
   constructor(private chartsData: DashboardChartsData) {
+    this.data = this.doughnut.getdata()[0];
   }
   public mainChart: IChartProps = {};
   public chart: Array<IChartProps> = [];
@@ -37,7 +40,6 @@ export class HomepageComponent {
   ngOnInit(): void {
     this.initCharts();
   }
-
   initCharts(): void {
     this.mainChart = this.chartsData.mainChart;
   }
@@ -123,16 +125,7 @@ export class HomepageComponent {
     maintainAspectRatio: false,
   };
 
-  chartDoughnutData = {
-    labels: ['VueJs', 'EmberJs', 'ReactJs', 'Angular'],
-    datasets: [
-      {
-        backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-        data: [40, 20, 80, 10]
-      }
-    ]
-  };
-
+  
   // chartDoughnutOptions = {
   //   aspectRatio: 1,
   //   responsive: true,
@@ -201,13 +194,16 @@ export class HomepageComponent {
   //   responsive: true,
   //   maintainAspectRatio: false,
   // };
-  data = {
-    labels: ['VueJs', 'EmberJs', 'ReactJs', 'Angular'],
-    datasets: [{
-      backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-      data: [40, 20, 80, 10]
-    }]
-  };
+  
+  public data:DoughnutChartData = { labels: [], // Provide initial values or an empty array depending on your requirements
+  datasets: [
+    {
+      backgroundColor: [],
+      data: []
+    }
+  ]};
+  doughnut:DashbaordService = inject(DashbaordService);
+
   data1 = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
