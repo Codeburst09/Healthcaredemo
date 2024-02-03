@@ -1,1 +1,161 @@
 <p>machine-appointment works!</p>
+<c-sidebar   visible class="sidebar-nav d-print-none sidebar page-padding sidebar-nav sidebar-fixed" ng-reflect-id="sidebar" ng-reflect-visible>
+    <!-- Main navigation links -->
+    <c-sidebar-nav class="" role="nav">
+      <ng-container *ngFor="let module of modules; let last = last">
+        <c-sidebar-nav-link class="nav-item ng-star-inserted"  [routerLink]="module.routerLink">
+          {{ module.label }}
+        </c-sidebar-nav-link>
+        <!-- Add a horizontal line if it's not the last module -->
+        <hr *ngIf="!last" class="sidebar-divider">
+      </ng-container>
+    </c-sidebar-nav>
+  </c-sidebar>
+  <form #customStylesForm="ngForm"
+      (ngSubmit)="onSubmit1()"
+      [gutter]="3"
+      [validated]="customStylesValidated"
+      novalidate
+      cForm cRow
+      class="needs-validation margin-form"
+>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom01">Doctor Name</label>
+    <input cFormControl id="validationCustom01" required type="text"/>
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom02">Date</label>
+    <input cFormControl id="validationCustom02" required type="date" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom03">From Time</label>
+    <input cFormControl id="validationCustom03" required type="time" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom03">To Time</label>
+    <input cFormControl id="validationCustom03" required type="time" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <h1>Patient Details</h1>
+  <hr/>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom04">UHID</label>
+    <input cFormControl id="validationCustom04" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+
+  </c-col>
+  <c-col [md]="6" class="mt-5">
+    <button cButton class="me-1" color="primary" type="submit">
+        Search
+      </button>
+      <button cButton class="me-1" color="primary" type="submit">
+        reset
+      </button>
+    
+  </c-col>
+  <br/>
+  <br/>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom05">Patient Name</label>
+    <input cFormControl id="validationCustom05" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom06">Marital Status</label>
+    <select cSelect id="validationCustom06" required>
+      <option value="">Married</option>
+      <option value="Unmarried">Unmarried</option>
+      
+    </select>
+    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom07">Age</label>
+    <input cFormControl id="validationCustom07" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom08">Gender</label>
+    <select cSelect id="validationCustom08" required>
+      <option value="">Male</option>
+      <option value="Female">Female</option>
+      
+    </select>
+    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom09">Address 1</label>
+    <input cFormControl id="validationCustom09" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom10">Address 2</label>
+    <input cFormControl id="validationCustom10" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom11">Country</label>
+    <select cSelect id="validationCustom11" required>
+      <option value="">India</option>
+      <option value="Australia">Australia</option>
+      
+    </select>
+    <c-form-feedback [valid]="false">Please provide a valid.</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom12">State</label>
+    <select cSelect id="validationCustom12" required>
+      <option value="">AndhraPradesh</option>
+      <option value="Sydney">Sydney</option>
+      
+    </select>
+    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom13">City</label>
+    <select cSelect id="validationCustom13" required>
+      <option value="">Guntur</option>
+      <option value="Chikago">Chikago</option>
+      
+    </select>
+    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom14">Pin Code</label>
+    <input cFormControl id="validationCustom14" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom15">Phone Number</label>
+    <input cFormControl id="validationCustom15" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom16">Mobile Number</label>
+    <input cFormControl id="validationCustom16" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom17">Blood Group</label>
+    <input cFormControl id="validationCustom17" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="validationCustom18">Remarks</label>
+    <input cFormControl id="validationCustom18" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [xs]="12">
+    <button cButton class="me-1" color="primary" type="submit">
+      Search
+    </button>
+    <button  cButton class="me-1" color="primary" type="reset">
+      Cancel
+    </button>
+    
+  </c-col>
+  </form>
+  

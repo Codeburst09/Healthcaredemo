@@ -1,1 +1,80 @@
 <p>doctor-leave works!</p>
+<c-sidebar   visible class="sidebar-nav d-print-none sidebar page-padding sidebar-nav sidebar-fixed" ng-reflect-id="sidebar" ng-reflect-visible>
+    <!-- Main navigation links -->
+    <c-sidebar-nav class="" role="nav">
+      <ng-container *ngFor="let module of modules; let last = last">
+        <c-sidebar-nav-link class="nav-item ng-star-inserted"  [routerLink]="module.routerLink">
+          {{ module.label }}
+        </c-sidebar-nav-link>
+        <!-- Add a horizontal line if it's not the last module -->
+        <hr *ngIf="!last" class="sidebar-divider">
+      </ng-container>
+    </c-sidebar-nav>
+  </c-sidebar>
+  <form #customStylesForm="ngForm"
+      (ngSubmit)="onSubmit1()"
+      [gutter]="3"
+      [validated]="customStylesValidated"
+      novalidate
+      cForm cRow
+      class="needs-validation margin-form"
+>
+  <c-col [md]="4">
+    <label cLabel for="validationCustom01">Doctor Id</label>
+    <input cFormControl id="validationCustom01" required type="text"/>
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="4">
+    <label cLabel for="validationCustom02">Doctor Name</label>
+    <input cFormControl id="validationCustom02" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+  </c-col>
+  <c-col [md]="4">
+  <c-form-check>
+    <input cFormCheckInput type="radio" value="one" name="flexRadioDefault" />
+    <label cFormCheckLabel>Date</label>
+  </c-form-check>
+  <c-form-check>
+    <input cFormCheckInput type="radio" value="two" name="flexRadioDefault" checked/>
+    <label cFormCheckLabel>Time</label>
+  </c-form-check>
+</c-col>
+  
+  <c-col [md]="4">
+    <label cLabel for="validationCustom03">From Date</label>
+    <input cFormControl id="validationCustom03" required type="text" />
+    <c-form-feedback [valid]="false">Please provide a valid Date.</c-form-feedback>
+  </c-col>
+  <c-col [md]="4">
+    <label cLabel for="validationCustom04">To Date</label>
+    <input cFormControl id="validationCustom04" required type="date" />
+    <c-form-feedback [valid]="false">Please provide a valid Date.</c-form-feedback>
+  </c-col>
+  <c-col [md]="4">
+    <label cLabel for="validationCustom05">From Time</label>
+    <input cFormControl id="validationCustom05" required type="time" />
+    <c-form-feedback [valid]="false">Please provide a valid time.</c-form-feedback>
+  </c-col>
+  <c-col [md]="4">
+    <label cLabel for="validationCustom06">Remarks</label>
+    <input cFormControl id="validationCustom06" required type="text" />
+    <c-form-feedback [valid]="false">Please provide a Remarks.</c-form-feedback>
+  </c-col>
+  <c-col [md]="4" class="me-3">
+    <label cLabel for="validationCustom07">To Time</label>
+    <input cFormControl id="validationCustom07" required type="time" />
+    <c-form-feedback [valid]="false">Please provide a valid time.</c-form-feedback>
+  </c-col>
+  <c-col [xs]="12">
+    <button cButton class="me-1" color="primary" type="submit">
+      Save
+    </button>
+    <button (click)="onReset1()" cButton class="me-1" color="primary" type="reset">
+      show
+    </button>
+    <button (click)="onReset1()" cButton color="primary" type="submit">
+        Search
+      </button>
+  </c-col>
+</form>
+  

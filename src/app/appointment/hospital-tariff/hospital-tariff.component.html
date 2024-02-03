@@ -1,1 +1,60 @@
 <p>hospital-tariff works!</p>
+<c-sidebar   visible class="sidebar-nav d-print-none sidebar page-padding sidebar-nav sidebar-fixed" ng-reflect-id="sidebar" ng-reflect-visible>
+    <!-- Main navigation links -->
+    <c-sidebar-nav class="" role="nav">
+      <ng-container *ngFor="let module of modules; let last = last">
+        <c-sidebar-nav-link class="nav-item ng-star-inserted"  [routerLink]="module.routerLink">
+          {{ module.label }}
+        </c-sidebar-nav-link>
+        <!-- Add a horizontal line if it's not the last module -->
+        <hr *ngIf="!last" class="sidebar-divider">
+      </ng-container>
+    </c-sidebar-nav>
+  </c-sidebar>
+  <form #customStylesForm="ngForm"
+  (ngSubmit)="onSubmit1()"
+  [gutter]="3"
+  [validated]="customStylesValidated"
+  novalidate
+  cForm cRow
+  class="needs-validation margin-form"
+>
+<c-col [md]="4">
+    <label cLabel for="validationCustom04">Payer</label>
+    <select cSelect id="validationCustom04" required>
+      <option value="">Cash</option>
+      <option value="PhonePay">PhonePay</option>
+      <option value="Paytm">Paytm</option>
+    </select>
+    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+  </c-col>
+  <c-col [md]="4">
+    <label cLabel for="validationCustom05">Department Name</label>
+    <select cSelect id="validationCustom05" required>
+      <option value="">Drivers</option>
+      <option value="Nurses">Nurses</option>
+      <option value="Cleaners">Cleaners</option>
+    </select>
+    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+  </c-col>
+    <c-col [md]="4">
+        <label cLabel for="validationCustom01">Service Name</label>
+        <input cFormControl id="validationCustom01" required type="text"/>
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+    <button cButton class="me-1" color="primary" type="submit">
+        Search
+      </button>
+        </c-col>
+</form>
+<table class="margin-form w-75" [striped]="true" cTable>
+    <thead color="secondary">
+    <tr>
+      <th scope="col">SN</th>
+      <th scope="col">Department</th>
+      <th scope="col">Service Name</th>
+      <th scope="col">Charges</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
