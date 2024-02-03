@@ -1,316 +1,316 @@
-<p>Reg works</p>
-<c-sidebar   visible class="sidebar-nav d-print-none sidebar page-padding sidebar-nav sidebar-fixed" ng-reflect-id="sidebar" ng-reflect-visible>
-    <!-- Main navigation links -->
-    <c-sidebar-nav class="" role="nav">
-      <ng-container *ngFor="let module of modules; let last = last">
-        <c-sidebar-nav-link class="nav-item ng-star-inserted"  [routerLink]="module.routerLink">
-          {{ module.label }}
-        </c-sidebar-nav-link>
-        <!-- Add a horizontal line if it's not the last module -->
-        <hr *ngIf="!last" class="sidebar-divider">
-      </ng-container>
-    </c-sidebar-nav>
-  </c-sidebar>
-  <form #customStylesForm="ngForm"
-  (ngSubmit)="onSubmit1()"
-  [gutter]="3"
-  [validated]="customStylesValidated"
-  novalidate
-  cForm cRow
-  class="needs-validation margin-form"
+    <p>Reg works</p>
+    <c-sidebar   visible class="sidebar-nav d-print-none sidebar page-padding sidebar-nav sidebar-fixed" ng-reflect-id="sidebar" ng-reflect-visible>
+        <!-- Main navigation links -->
+        <c-sidebar-nav class="" role="nav">
+          <ng-container *ngFor="let module of modules; let last = last">
+            <c-sidebar-nav-link class="nav-item ng-star-inserted"  [routerLink]="module.routerLink">
+              {{ module.label }}
+            </c-sidebar-nav-link>
+            <!-- Add a horizontal line if it's not the last module -->
+            <hr *ngIf="!last" class="sidebar-divider">
+          </ng-container>
+        </c-sidebar-nav>
+      </c-sidebar>
+      <form #customStylesForm="ngForm"
+      (ngSubmit)="onSubmit1()"
+      [gutter]="3"
+      [validated]="customStylesValidated"
+      novalidate
+      cForm cRow
+      class="needs-validation margin-form"
 >
-<c-col [md]="4">
-<label cLabel for="validationCustom01">UHID</label>
-<c-input-group>
-    <input aria-label="CMH" placeholder="CMH" cFormControl />
-    <input aria-label="UHID" placeholder="UHID" cFormControl />
-  </c-input-group>    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-</c-col>
-<c-col [md]="4">
-<label cLabel for="validationCustom02">Patient Name</label>
-<input cFormControl id="validationCustom02" required type="text" />
-<c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-</c-col>
-<c-col [md]="4">
-<c-form-check>
-    <input cFormCheckInput id="checkOne" type="checkbox" />
-    <label cFormCheckLabel for="checkOne">MLC</label>
-  </c-form-check>
-  <c-form-check>
-    <input [checked]="true" cFormCheckInput id="checkTwo" type="checkbox" />
-    <label cFormCheckLabel for="checkTwo">Alergy</label>
-  </c-form-check>
-</c-col>
-<c-col [md]="4">
-<c-input-group class="mt-4">
-    <select cSelect id="validationCustom04" required>
-        <option value="">Father</option>
-        <option value="Mother">Mother</option>
-        <option value="sister">sister</option>
-      </select>
-    <input aria-label="Text input with dropdown button" cFormControl/>
-  </c-input-group>
+  <c-col [md]="4">
+    <label cLabel for="validationCustom01">UHID</label>
+    <c-input-group>
+        <input aria-label="CMH" placeholder="CMH" cFormControl />
+        <input aria-label="UHID" placeholder="UHID" cFormControl />
+      </c-input-group>    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
   </c-col>
   <c-col [md]="4">
-    <label cLabel for="validationCustom05">Gender</label>
-    <select cSelect id="validationCustom05" required>
-      <option value="">Male</option>
-      <option value="Female">Female</option>
-    </select>
-    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+    <label cLabel for="validationCustom02">Patient Name</label>
+    <input cFormControl id="validationCustom02" required type="text" />
+    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
   </c-col>
-  <c-col [md]="2">
-    <label cLabel for="validationCustom06">Payer</label>
-    <select cSelect id="validationCustom06" required>
-      <option value="">Select Identity</option>
-    </select>
-    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+  <c-col [md]="4">
+    <c-form-check>
+        <input cFormCheckInput id="checkOne" type="checkbox" />
+        <label cFormCheckLabel for="checkOne">MLC</label>
+      </c-form-check>
+      <c-form-check>
+        <input [checked]="true" cFormCheckInput id="checkTwo" type="checkbox" />
+        <label cFormCheckLabel for="checkTwo">Alergy</label>
+      </c-form-check>
+  </c-col>
+  <c-col [md]="4">
+    <c-input-group class="mt-4">
+        <select cSelect id="validationCustom04" required>
+            <option value="">Father</option>
+            <option value="Mother">Mother</option>
+            <option value="sister">sister</option>
+          </select>
+        <input aria-label="Text input with dropdown button" cFormControl/>
+      </c-input-group>
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="validationCustom05">Gender</label>
+        <select cSelect id="validationCustom05" required>
+          <option value="">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+      </c-col>
+      <c-col [md]="2">
+        <label cLabel for="validationCustom06">Payer</label>
+        <select cSelect id="validationCustom06" required>
+          <option value="">Select Identity</option>
+        </select>
+        <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
 
-  </c-col>
-  <c-col [md]="2" class="mt-5">
-    <input cFormControl id="validationCustom07" required type="text" />
-  </c-col>
-  <c-col [md]="4">
-    <label cLabel for="validationCustom08">Occupation</label>
-    <select cSelect id="validationCustom08" required>
-      <option value="">select</option>
-    </select>
-    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-  </c-col>
-  <c-col [md]="4">
-    <label cLabel for="validationCustom09">Maritial status</label>
-    <select cSelect id="validationCustom09" required>
-      <option value="">Unmarried</option>
-      <option value="Married">Married</option>
-    </select>
-    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-  </c-col>
-  <c-col [md]="4" class="mt-5">
-    <input cFormControl id="validationCustom10" required type="text" placeholder="Email ID"/>
-  </c-col>
-  <c-col [md]="4">
-    <label cLabel for="validationCustom11">DOB</label>
-    <input cFormControl id="validationCustom11" required type="date" placeholder="DOB" />
-    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-  </c-col>
-  <c-col [md]="4">
-    <label cLabel for="validationCustom12">Nationality</label>
-    <select cSelect id="validationCustom12" required>
-      <option value="">Select</option>
-      <option value="Indian">Indian</option>
-    </select>
-    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-  </c-col>
-  <c-col [md]="4">
-    <label cLabel for="validationCustom13">Blood Group</label>
-    <select cSelect id="validationCustom13" required>
-      <option value="">Select</option>
-      <option value="O+">O+</option>
-    </select>
-    <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-  </c-col>
-  <c-col [md]="4">
-    <label cLabel for="validationCustom14">Age</label>
-    <input cFormControl id="validationCustom14" required type="years" placeholder="Years" />
-    <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-  </c-col>
-  
-  <c-nav variant="tabs">
-    <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Address</a>
-    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Payer Information</a>
-    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>Alergy</a>
-  </c-nav>
-  <c-tab-content #tabContent="cTabContent">
-    <c-tab-pane class="p-3">
-        <form [gutter]="3" cForm cRow>
-        <c-col [md]="4">
-            <input cFormControl id="validationCustom15" required type="text" placeholder="Address"/>
-          </c-col>
-          <c-col [md]="4">
-            <input cFormControl id="validationCustom16" required type="text" placeholder="City"/>
-          </c-col>
-          <c-col [md]="4">
-            <input cFormControl id="validationCustom17" required type="text" placeholder="State"/>
-          </c-col>
-          <c-col [md]="4">
-            <input cFormControl id="validationCustom18" required type="text" placeholder="Pin Number"/>
-          </c-col>
-          <c-col [md]="4">
-            <input cFormControl id="validationCustom19" required type="text" placeholder="Mobile Number"/>
-          </c-col>
-          <c-col [md]="4">
-            <input cFormControl id="validationCustom20" required type="text" placeholder="Refferel Number"/>
-          </c-col>
-          <c-col [md]="4">
-            <input cFormControl id="validationCustom21" required type="text" placeholder="Mobile Number"/>
-          </c-col>
-          <c-col [md]="4">
-            <button cButton class="me-1" color="primary" type="submit">
-                Save
-              </button>           
-               </c-col>
-        </form>
-    </c-tab-pane>
-    <c-tab-pane class="p-3">
-        <form [gutter]="3" cForm cRow>
-        <c-col [md]="6">
-            <label cLabel for="validationCustom22">Payer/Company</label>
-            <select cSelect id="validationCustom22" required>
-              <option value="">Select</option>
-            </select>
-            <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom23">Sponcer</label>
-            <select cSelect id="validationCustom23" required>
-              <option value="">Select</option>
-            </select>
-            <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom24">Sub Company</label>
-            <select cSelect id="validationCustom24" required>
-              <option value="">Select</option>
-            </select>
-            <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom25">Network</label>
-            <select cSelect id="validationCustom25" required>
-              <option value="">Select</option>
-            </select>
-            <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom26">Policy Number</label>
-            <input cFormControl id="validationCustom26" required type="text" placeholder="Policy Number" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom27">Credit Limit</label>
-            <input cFormControl id="validationCustom27" required type="text" placeholder="Credit Limit" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom28">Valid From</label>
-            <input cFormControl id="validationCustom28" required type="date" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom29">Valid Upto</label>
-            <input cFormControl id="validationCustom29" required type="date"/>
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom30">OPD Credit Limit</label>
-            <input cFormControl id="validationCustom30" required type="text" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom31">Co-Pay MaxLimit</label>
-            <input cFormControl id="validationCustom31" required type="text" placeholder="Co-Pay MaxLimit" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <c-form-check>
-                <input cFormCheckInput id="checkOne" type="checkbox" />
-                <label cFormCheckLabel for="checkOne">Admission Approval Required</label>
-              </c-form-check>
-            
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom33">IPD Pharmacy Co-Pay Percent</label>
-            <input cFormControl id="validationCustom33" required type="text" placeholder="IPD Pharmacy Co-Pay Percent" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom34">Top-Up Card</label>
-            <input cFormControl id="validationCustom34" required type="text" placeholder="Top-Up Card" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom35">OPD Pharmacy Co-Pay Percent</label>
-            <input cFormControl id="validationCustom35" required type="text" placeholder="OPD Pharmacy Co-Pay Percent" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom36">Card Number</label>
-            <input cFormControl id="validationCustom36" required type="text" placeholder="Card Number" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom37">Pharmacy Co-Pay MaxLimit</label>
-            <input cFormControl id="validationCustom37" required type="text" placeholder="Pharmacy Co-Pay MaxLimit" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom38">Coverage</label>
-            <select cSelect id="validationCustom38" required>
-              <option value="">Select</option>
-            </select>
-            <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-          </c-col>
-          <c-col [md]="6">
-            <label cLabel for="validationCustom39">Pharmacy Credit Limit</label>
-            <input cFormControl id="validationCustom39" required type="text" placeholder="Pharmacy Credit Limit" />
-            <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-          </c-col>
-          </form>
-    </c-tab-pane>
-    <c-tab-pane class="p-3">
-        <form [gutter]="3" cForm cRow>
+      </c-col>
+      <c-col [md]="2" class="mt-5">
+        <input cFormControl id="validationCustom07" required type="text" />
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="validationCustom08">Occupation</label>
+        <select cSelect id="validationCustom08" required>
+          <option value="">select</option>
+        </select>
+        <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="validationCustom09">Maritial status</label>
+        <select cSelect id="validationCustom09" required>
+          <option value="">Unmarried</option>
+          <option value="Married">Married</option>
+        </select>
+        <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+      </c-col>
+      <c-col [md]="4" class="mt-5">
+        <input cFormControl id="validationCustom10" required type="text" placeholder="Email ID"/>
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="validationCustom11">DOB</label>
+        <input cFormControl id="validationCustom11" required type="date" placeholder="DOB" />
+        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="validationCustom12">Nationality</label>
+        <select cSelect id="validationCustom12" required>
+          <option value="">Select</option>
+          <option value="Indian">Indian</option>
+        </select>
+        <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="validationCustom13">Blood Group</label>
+        <select cSelect id="validationCustom13" required>
+          <option value="">Select</option>
+          <option value="O+">O+</option>
+        </select>
+        <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="validationCustom14">Age</label>
+        <input cFormControl id="validationCustom14" required type="years" placeholder="Years" />
+        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+      </c-col>
+      
+      <c-nav variant="tabs">
+        <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Address</a>
+        <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Payer Information</a>
+        <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>Alergy</a>
+      </c-nav>
+      <c-tab-content #tabContent="cTabContent">
+        <c-tab-pane class="p-3">
+            <form [gutter]="3" cForm cRow>
+            <c-col [md]="4">
+                <input cFormControl id="validationCustom15" required type="text" placeholder="Address"/>
+              </c-col>
+              <c-col [md]="4">
+                <input cFormControl id="validationCustom16" required type="text" placeholder="City"/>
+              </c-col>
+              <c-col [md]="4">
+                <input cFormControl id="validationCustom17" required type="text" placeholder="State"/>
+              </c-col>
+              <c-col [md]="4">
+                <input cFormControl id="validationCustom18" required type="text" placeholder="Pin Number"/>
+              </c-col>
+              <c-col [md]="4">
+                <input cFormControl id="validationCustom19" required type="text" placeholder="Mobile Number"/>
+              </c-col>
+              <c-col [md]="4">
+                <input cFormControl id="validationCustom20" required type="text" placeholder="Refferel Number"/>
+              </c-col>
+              <c-col [md]="4">
+                <input cFormControl id="validationCustom21" required type="text" placeholder="Mobile Number"/>
+              </c-col>
+              <c-col [md]="4">
+                <button cButton class="me-1" color="primary" type="submit">
+                    Save
+                  </button>           
+                   </c-col>
+            </form>
+        </c-tab-pane>
+        <c-tab-pane class="p-3">
+            <form [gutter]="3" cForm cRow>
             <c-col [md]="6">
-                <label cLabel for="validationCustom39">Allergy Type</label>
-            <select cSelect id="validationCustom39" required>
-              <option value="">Select</option>
-              <option value="DRUG ALLERGY">DRUG ALLERGY</option>
-              <option value="DUST ALLERGY">DUST ALLERGY</option>
-              <option value="FOOD ALLERGY">FOOD ALLERGY</option>
-              <option value="SKIN ALLERGY">SKIN ALLERGY</option>
-            </select>
-            <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-            </c-col>
-            <c-col [md]="6">
-                <label cLabel for="validationCustom40">Allergen</label>
-            <select cSelect id="validationCustom40" required>
-              <option value="">Select</option>
-            </select>
-            <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
-            </c-col>
-        </form>
-        <table class="margin-form" [striped]="true" cTable>
-            <thead color="secondary">
-            <tr>
-              <th scope="col">SN</th>
-              <th scope="col">Alergy Type</th>
-              <th scope="col">Alergy Name</th>
-            </tr>
-            </thead>
-            <tbody>
+                <label cLabel for="validationCustom22">Payer/Company</label>
+                <select cSelect id="validationCustom22" required>
+                  <option value="">Select</option>
+                </select>
+                <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom23">Sponcer</label>
+                <select cSelect id="validationCustom23" required>
+                  <option value="">Select</option>
+                </select>
+                <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom24">Sub Company</label>
+                <select cSelect id="validationCustom24" required>
+                  <option value="">Select</option>
+                </select>
+                <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom25">Network</label>
+                <select cSelect id="validationCustom25" required>
+                  <option value="">Select</option>
+                </select>
+                <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom26">Policy Number</label>
+                <input cFormControl id="validationCustom26" required type="text" placeholder="Policy Number" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom27">Credit Limit</label>
+                <input cFormControl id="validationCustom27" required type="text" placeholder="Credit Limit" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom28">Valid From</label>
+                <input cFormControl id="validationCustom28" required type="date" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom29">Valid Upto</label>
+                <input cFormControl id="validationCustom29" required type="date"/>
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom30">OPD Credit Limit</label>
+                <input cFormControl id="validationCustom30" required type="text" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom31">Co-Pay MaxLimit</label>
+                <input cFormControl id="validationCustom31" required type="text" placeholder="Co-Pay MaxLimit" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <c-form-check>
+                    <input cFormCheckInput id="checkOne" type="checkbox" />
+                    <label cFormCheckLabel for="checkOne">Admission Approval Required</label>
+                  </c-form-check>
+                
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom33">IPD Pharmacy Co-Pay Percent</label>
+                <input cFormControl id="validationCustom33" required type="text" placeholder="IPD Pharmacy Co-Pay Percent" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom34">Top-Up Card</label>
+                <input cFormControl id="validationCustom34" required type="text" placeholder="Top-Up Card" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom35">OPD Pharmacy Co-Pay Percent</label>
+                <input cFormControl id="validationCustom35" required type="text" placeholder="OPD Pharmacy Co-Pay Percent" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom36">Card Number</label>
+                <input cFormControl id="validationCustom36" required type="text" placeholder="Card Number" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom37">Pharmacy Co-Pay MaxLimit</label>
+                <input cFormControl id="validationCustom37" required type="text" placeholder="Pharmacy Co-Pay MaxLimit" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom38">Coverage</label>
+                <select cSelect id="validationCustom38" required>
+                  <option value="">Select</option>
+                </select>
+                <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+              </c-col>
+              <c-col [md]="6">
+                <label cLabel for="validationCustom39">Pharmacy Credit Limit</label>
+                <input cFormControl id="validationCustom39" required type="text" placeholder="Pharmacy Credit Limit" />
+                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+              </c-col>
+              </form>
+        </c-tab-pane>
+        <c-tab-pane class="p-3">
+            <form [gutter]="3" cForm cRow>
+                <c-col [md]="6">
+                    <label cLabel for="validationCustom39">Allergy Type</label>
+                <select cSelect id="validationCustom39" required>
+                  <option value="">Select</option>
+                  <option value="DRUG ALLERGY">DRUG ALLERGY</option>
+                  <option value="DUST ALLERGY">DUST ALLERGY</option>
+                  <option value="FOOD ALLERGY">FOOD ALLERGY</option>
+                  <option value="SKIN ALLERGY">SKIN ALLERGY</option>
+                </select>
+                <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+                </c-col>
+                <c-col [md]="6">
+                    <label cLabel for="validationCustom40">Allergen</label>
+                <select cSelect id="validationCustom40" required>
+                  <option value="">Select</option>
+                </select>
+                <c-form-feedback [valid]="false">Please provide a valid State.</c-form-feedback>
+                </c-col>
+            </form>
+            <table class="margin-form" [striped]="true" cTable>
+                <thead color="secondary">
                 <tr>
-                    <th scope="row">1</th>
-                    <td>54</td>
-                    <td>Patient</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>67</td>
-                    <td>Thornton</td>
-                  </tr>
-            </tbody>
-          </table>
-    </c-tab-pane>
-  </c-tab-content>
-  <c-col [xs]="12">
-    <button cButton class="me-1" color="primary" type="submit">
-      Print Patient Info
-    </button>
-    <button cButton class="me-1" color="primary" type="reset">
-      Save
-    </button>
-    <button cButton color="primary" type="submit">
-        Reset
-      </button>
-  </c-col>
+                  <th scope="col">SN</th>
+                  <th scope="col">Alergy Type</th>
+                  <th scope="col">Alergy Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>54</td>
+                        <td>Patient</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>67</td>
+                        <td>Thornton</td>
+                      </tr>
+                </tbody>
+              </table>
+        </c-tab-pane>
+      </c-tab-content>
+      <c-col [xs]="12">
+        <button cButton class="me-1" color="primary" type="submit">
+          Print Patient Info
+        </button>
+        <button cButton class="me-1" color="primary" type="reset">
+          Save
+        </button>
+        <button cButton color="primary" type="submit">
+            Reset
+          </button>
+      </c-col>
 
-</form>
+  </form>

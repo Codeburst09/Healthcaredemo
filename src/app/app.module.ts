@@ -36,10 +36,11 @@ import { InvestigationReportComponent } from './appointment/investigation-report
 import { PatientRegistrationComponent } from './appointment/patient-registration/patient-registration.component';
 import { ChartjsComponent } from '@coreui/angular-chartjs';
 import { DashbaordService } from './dashbaord.service';
+import { TabsModule } from '@coreui/angular';
 @NgModule({
     declarations: [AppComponent,PatientRegistrationComponent,InvestigationReportComponent,MachineAppointmentListComponent,MachineAppointmentComponent,HospitalTariffComponent,AppComponent,DoctorAvailabilityComponent,DoctorLeaveComponent, HomepageComponent,NavComponent, AppointmentComponent,DoctorAppointmentListComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [FormsModule,ChartjsComponent,ProgressModule,TableModule,NavModule,ModalModule,ListGroupModule,ButtonModule,TooltipModule,PopoverModule,GridModule,CardModule, IconModule,ListGroupModule,RouterModule.forRoot(routes), ReactiveFormsModule,DropdownModule,SharedModule,ListGroupModule,CommonModule,AlertModule,IconModule, BrowserAnimationsModule,FormModule,GridModule,CardModule,ButtonModule,ButtonGroupModule],
+  imports: [FormsModule,TabsModule,ChartjsComponent,ProgressModule,TableModule,NavModule,ModalModule,ListGroupModule,ButtonModule,TooltipModule,PopoverModule,GridModule,CardModule, IconModule,ListGroupModule,RouterModule.forRoot(routes), ReactiveFormsModule,DropdownModule,SharedModule,ListGroupModule,CommonModule,AlertModule,IconModule, BrowserAnimationsModule,FormModule,GridModule,CardModule,ButtonModule,ButtonGroupModule],
   bootstrap: [AppComponent]
 })
 export class AppModule 
